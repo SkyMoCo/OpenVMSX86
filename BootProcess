@@ -1,0 +1,30 @@
+Start the Virtual Machine
+Telnet to localhost 3048 and set options
+  telnet> unset crlf 
+   Will send carriage returns as telnet <CR><NUL>. 
+   ^] 
+   telnet> mode char 
+
+At the shell prompt run map fs*
+Shell> map fs*
+       map fs*
+Mapping table
+      FS1: Alias(s):CD0b65535a0:;BLK5:
+          PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x1,0xFFFF,0x0)/CDROM(0x0)
+      FS0: Alias(s):HD0a65535a1:;BLK1:
+          PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x0,0xFFFF,0x0)/HD(1,GPT,0BBD7764-EA0B-11ED-9337-AA000400FEFF,0x2C7D00,0x3E800)
+Start boot manager
+  fs0:\efi\vms\vms_bootmgr.efi
+See the devices
+  BOOTMGR> DEVICES
+  DEVICES
+
+  BOOTABLE DEVICES (System Disks, Installation Kits, other):
+    DKA100     (DVD) = FS1    UEFI: E9_2_1       VMS: None         1574  MB  SATA DVD
+    DKA0        (HD) = FS0    UEFI: E9_2_1       VMS: X86SYS       76800 MB  SATA Disk
+
+Boot the system
+   Boot
+  
+  Configure tcpip
+  
