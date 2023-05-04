@@ -1,9 +1,56 @@
 Various Hints and Tricks
 
-Editing EVE
+TCPIP
+  Used a bridge adapter on my VirtualBox build
+
+SSH
+   @SYS$STARTUP:SSH$STARTUP.COM
+
+
+EVE
+  https://wiki.vmssoftware.com/EVE
   SET TERM/INQUIRE
   EDIT/TPU
-  
-  https://wiki.vmssoftware.com/EVE
-
   Eve command line <shift-F6>
+ 
+ Setup space for custom system stuff
+   set def VMSBOX$DKA0:[HOME]
+   create /directory [.system]
+
+ 
+ Setup users
+    create/directory VMSBOX$DKA0:[HOME.kevins]
+    RUN SYS$SYSTEM:AUTHORIZE
+
+    mod kevins/nopwdexp
+    
+    UAF> show kevins
+
+Username: KEVINS                           Owner:
+Account:                                   UIC:    [200,100] ([KEVINS])
+CLI:      DCL                              Tables: DCLTABLES
+Default:  HOME:[KEVINS]
+LGICMD:
+Flags:
+Primary days:   Mon Tue Wed Thu Fri
+Secondary days:                     Sat Sun
+No access restrictions
+Expiration:            (none)    Pwdminimum: 15   Login Fails:     0
+Pwdlifetime:         60 00:00    Pwdchange:   4-MAY-2023 12:58
+Last Login:  4-MAY-2023 12:58 (interactive),  4-MAY-2023 13:52 (non-interactive)
+Maxjobs:         0  Fillm:       128  Bytlm:        128000
+Maxacctjobs:     0  Shrfillm:      0  Pbytlm:            0
+Maxdetach:       0  BIOlm:       150  JTquota:        4096
+Prclm:           8  DIOlm:       150  WSdef:          4096
+Prio:            4  ASTlm:       300  WSquo:          8192
+Queprio:         4  TQElm:       100  WSextent:      16384
+CPU:        (none)  Enqlm:      4000  Pgflquo:      256000
+Authorized Privileges:
+  NETMBX       TMPMBX
+Default Privileges:
+  NETMBX       TMPMBX
+
+    
+    
+    
+  
